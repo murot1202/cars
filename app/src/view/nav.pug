@@ -1,0 +1,13 @@
+nav.nav     
+    .container 
+        a.logo(href="#!")
+            | Premium
+            p CAR
+        .nav__wrapper 
+            span.fas.fa-caret-circle-down.nav__btn
+            ul.nav__menu 
+                each val in ['Home', 'Recipes', 'Article', 'Contact', 'Purchase']
+                    li 
+                        a.nav__menu-link(href="#!")= val
+        i.far.fa-search 
+         

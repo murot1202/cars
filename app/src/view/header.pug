@@ -1,0 +1,14 @@
+- var header = [{vehicle: 'Vehicle', title: 'Rickie Baroch - June 6, 2019', text: 'One of Saturn’s largest rings may be newer than anyone', img: 'img/Bitmap.png'},{vehicle: 'Vehicle', title: 'Rickie Baroch - June 6, 2019', text: 'One of Saturn’s largest rings may be newer than anyone', img: 'img/Bitmap1.png'},{vehicle: 'Vehicle', title: 'Rickie Baroch - June 6, 2019', text: 'One of Saturn’s largest rings may be newer than anyone', img: 'img/Bitmap2.png'},{vehicle: 'Vehicle', title: 'Rickie Baroch - June 6, 2019', text: 'One of Saturn’s largest rings may be newer than anyone', img: 'img/Bitmap4.png'},{vehicle: 'Vehicle', title: 'Rickie Baroch - June 6, 2019', text: 'One of Saturn’s largest rings may be newer than anyone', img: 'img/Bitmap3.png'}]
+
+
+header.header
+    .header__info 
+        .container 
+            .header__cars
+                each val in header
+                    .header__cars-item 
+                        .header__cars-info 
+                            a.vehicle=val.vehicle 
+                            h4.header__cars-title= val.title
+                            p.header__cars-text= val.text
+                        img.header__cars-img(src=val.img, alt="")

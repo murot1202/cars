@@ -1,0 +1,43 @@
+- var post = [{img: 'img/Mask.png', title: 'One of Saturn’s largest rings may be newer than…', data: 'Rickie Baroch - June 6, 2019'},{img: 'img/Mask1.png', title: 'One of Saturn’s largest rings may be newer than…', data: 'Rickie Baroch - June 6, 2019'},{img: 'img/Mask2.png', title: 'One of Saturn’s largest rings may be newer than…', data: 'Rickie Baroch - June 6, 2019'},]
+
+
+
+footer.footer 
+    .footer__menu 
+        .container.d-flex.justify-content-between
+            .footer__menu-info 
+                a.logo(href="#!")
+                    | Premium
+                    p CAR
+                p.footer__menu-info_text Short description about the company Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                h3.footer__menu-info_title Keep in touch
+                .footer__menu-info_icons.d-flex
+                    a.fab.fa-facebook-f.icon(href="https://www.facebook.com/380156035478242/") 
+                    a.fab.fa-twitter.icon(href="https://twitter.com/") 
+                    a.fab.fa-instagram.icon(href="https://instagram.com/proweb.uz?igshid=11hoyymtobup0") 
+                    a.fab.fa-google-plus-g.icon(href="https://proweb.uz/?gclid=CjwKCAjwr_uCBhAFEiwAX8YJgWnvqtGr4ehMJa39GswV02D2RhWSBdNowdGlfwUNGOULt0lLn8xFfhoCLF0QAvD_BwE") 
+                    a.fab.fa-instagram.icon(href="https://instagram.com/proweb.uz?igshid=11hoyymtobup0")
+            .footer__menu-posts 
+                h3.footer__menu-posts_title Recent posts
+                each val in post
+                    .footer__menu-posts_post.d-flex
+                        img.img(src=val.img, alt="") 
+                        .info.d-flex.flex-column 
+                            h4.title=val.title 
+                            p.data=val.data
+            .footer__menu-mail.d-flex.flex-column 
+                .footer__menu-mail_title Newsletter
+                .footer__menu-mail_comment.d-flex.flex-column 
+                    input.footer__menu-mail_comment-text(type="text" placeholder="Your name")
+                    input.footer__menu-mail_comment-text(type="text" placeholder="Your email address")
+                    .main_btn Subscribe to newsletter
+
+    .footer__end 
+        .container.d-flex.justify-content-between
+            h5.footer__end-title @2019 Logwork. All Right Reserved.
+            .footer__end-wrapper 
+                span.fas.fa-caret-circle-down.footer__end-btn
+                ul.footer__end-menu 
+                    each val in ['Home', 'Recipes', 'Article', 'Contact', 'Purchase']
+                        li 
+                            a.footer__end-menu_link(href="#!")= val

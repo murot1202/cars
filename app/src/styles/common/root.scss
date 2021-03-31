@@ -1,0 +1,26 @@
+$main-color: #fff;
+$title: #F18128;
+$btn-bg:  #F18128;
+$btn-hover-bg: #040D1F;
+$bg: #030914;
+$border-radius: 6px; 
+
+$Lato: ('Regular', 400),('Bold', 700);
+             
+@each $name, $weight in $Lato {
+    @font-face {
+        font-family: 'L';
+        src: url(../fonts/Lato/Lato-#{$name}.woff2);
+        font-weight: $weight;
+    }
+}
+
+$PTSans: ('Regular', 400),('Bold', 700);
+             
+@each $name, $weight in $PTSans {
+    @font-face {
+        font-family: 'PT';
+        src: url(../fonts/PtSans/PTSans-#{$name}.woff2);
+        font-weight: $weight;
+    }
+}

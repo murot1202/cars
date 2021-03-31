@@ -1,0 +1,74 @@
+- var mainleft = [{vehicle: 'Vehicle', title: 'One of Saturn’s largest rings may be newer than anyone',data: 'Rickie Baroch - June 6, 2019', text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem', img: 'img/Bitmap6.png'},{vehicle: 'Vehicle', title: 'One of Saturn’s largest rings may be newer than anyone',data: 'Rickie Baroch - June 6, 2019', text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem', img: 'img/Bitmap7.png'},{vehicle: 'Vehicle', title: 'One of Saturn’s largest rings may be newer than anyone',data: 'Rickie Baroch - June 6, 2019', text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem', img: 'img/Bitmap8.png'},{vehicle: 'Vehicle', title: 'One of Saturn’s largest rings may be newer than anyone',data: 'Rickie Baroch - June 6, 2019', text: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem', img: 'img/Bitmap9.png'},]
+
+- var mainpost = [{vehicle: 'Vehicle', img: 'img/post1.png', title: 'One of Saturn’s largest rings may be newer than anyone', data: 'Rickie Baroch - June 6, 2019'},{vehicle: 'Vehicle', img: 'img/post2.png', title: 'One of Saturn’s largest rings may be newer than anyone', data: 'Rickie Baroch - June 6, 2019'},{vehicle: 'Vehicle', img: 'img/post3.png', title: 'One of Saturn’s largest rings may be newer than anyone', data: 'Rickie Baroch - June 6, 2019'},]
+
+-var popular = [{bmv: 'BMV', img: 'img/bmv1.png', title: 'One of Saturn’s largest rings may be newer than anyone', data: 'Rickie Baroch - June 6, 2019'},{bmv: 'BMV', img: 'img/bmv2.png', title: 'One of Saturn’s largest rings may be newer than anyone', data: 'Rickie Baroch - June 6, 2019'},{bmv: 'BMV', img: 'img/bmv3.png', title: 'One of Saturn’s largest rings may be newer than anyone', data: 'Rickie Baroch - June 6, 2019'},{bmv: 'BMV', img: 'img/bmv4.png', title: 'One of Saturn’s largest rings may be newer than anyone', data: 'Rickie Baroch - June 6, 2019'},]
+
+-var tags = [{tag: 'Business'},{tag: 'Freelance'},{tag: 'Money'},{tag: 'Experience'},{tag: 'Lifestyle'},{tag: 'SEO'},{tag: 'Wordpress'},{tag: 'Marketing'},{tag: 'UX'},{tag: 'Modern'},{tag: 'Success'},{tag: 'Nature'},{tag: 'Productivity'},{tag: 'Sales page'},{tag: 'Sell'},{tag: 'Teamwork'},{tag: 'Monetize'},]
+
+
+main.main 
+    .main__info 
+        .container.d-flex.flex-column
+            .main__items.d-flex.justify-content-between 
+                .main__cars
+                    each val in mainleft
+                        .main__cars-item 
+                            img.main__cars-img(src=val.img, alt="")
+                            .main__cars-info 
+                                a.vehicle=val.vehicle 
+                                h4.main__cars-title= val.title
+                                p.main__cars-data= val.data
+                                p.main__cars-text= val.text
+
+                .main__right
+                    .main__right-hunt
+                        img.img(src="img/hunt.png", alt="")
+                        h4.main__right-hunt_title Leon Hunt
+                        p.main__right-hunt_data Food & cooking bloger
+                        p.main__right-hunt_text Hi, I'm Leon. Cooking is the way I express my creative side to the world. Welcome to my Kitchen Corner on…
+                        button.main_btn Continue Reading
+                    .main__right-post 
+                        h5.main__right-post_title Popular posts
+                        each val in mainpost
+                            .main__right-post_item 
+                                a.vehicle=val.vehicle 
+                                img.img(src=val.img, alt="")
+                                .main__right-post_info 
+                                    h3.title= val.title
+                                    p.data= val.data
+                    .main__right-instagram 
+                        h5.main__right-instagram_title  Instagram
+                        .main__right-instagram_img 
+                            img(src="img/42.png", alt="")
+                            img(src="img/23.png", alt="")
+                            img(src="img/43.png", alt="")
+                            img(src="img/24.png", alt="")
+                            img(src="img/44.png", alt="")
+                            img(src="img/30.png", alt="")
+                        button.main_btn
+                            i.fab.fa-instagram 
+                            | Instagram
+                    .main__right-tags.d-flex.flex-column 
+                        h5.main__right-tags_title Tags 
+                        .d-flex.flex-wrap
+                            each val in tags
+                                .main__right-tags_tag.tag=val.tag 
+                    .main__right-mail.d-flex.flex-column 
+                        .main__right-mail_title Email newsletter
+                        .main__right-mail_text Sign up to receive email updates and to hear what's going on.
+                        .main__right-mail_comment.d-flex.flex-column 
+                            input.main__right-mail_comment-text(type="text" placeholder="Your name")
+                            input.main__right-mail_comment-text(type="text" placeholder="Your email address")
+                            .main_btn Subscribe to newsletter
+
+            .main__popular 
+                h2.main__popular-text Most popular 
+                .main__popular-items.d-flex 
+                    each val in popular
+                        .main__popular-items_item 
+                            a.vehicle=val.bmv
+                            img.img(src=val.img, alt="")
+                            .main__popular-items_item-info 
+                                h4.title=val.title 
+                                p.data=val.data
